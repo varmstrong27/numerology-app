@@ -11,7 +11,7 @@ get '/people/new' do
 end
 
 # Handle form submmission by creating a new Person object and redirect to show page when finished
-post '/people' do
+post '/people/' do
 	if params[:birthdate].include?("-")
 		birthdate = params[:birthdate]
 	else
