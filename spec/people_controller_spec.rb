@@ -17,12 +17,12 @@ describe "Our Person Controller" do
   end
   
   it "displays a link to a person's show page on the index view" do
-    get("/people")
+    get("/people/")
     expect(last_response.body.include?("/people/#{@person.id}")).to be(true)
   end
     
   it 'responds with a view titled "People" when we visit /people' do
-    get('/people')
+    get('/people/')
     expect(last_response.body.include?("People")).to be(true)
   end
   
@@ -33,7 +33,7 @@ describe "Our Person Controller" do
   
   it 'creates a person when we post to /people' do
     people_count = Person.all.count
-    post("/people", { first_name: "Kermit", last_name: "TheFrog", birthdate: (DateTime.now - 45.years) })
+    post("/people/", { first_name: "Kermit", last_name: "TheFrog", birthdate: (DateTime.now - 45.years) })
     expect(Person.all.count == people_count + 1).to eq(true)
   end
   

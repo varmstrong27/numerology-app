@@ -29,12 +29,12 @@ end
 
 # Edit individual person
 put '/people/:id' do
-	person = Person.find(params[:id])
-	person.first_name = params[:first_name]
-	person.last_name = params[:last_name]
-	person.birthdate = params[:birthdate]
-	person.save
-	redirect "/people/#{person.id}"    
+	@person = Person.find(params[:id])
+	@person.first_name = params[:first_name]
+	@person.last_name = params[:last_name]
+	@person.birthdate = params[:birthdate]
+	@person.save
+	redirect "/people/#{@person.id}"    
  end
 
 # Delete individual person

@@ -14,7 +14,7 @@ describe 'Our Helper' do
   end  
   
   it 'gets the proper form action for a new person' do
-    expect(people_form_action(@new_person)).to eq("/people")
+    expect(people_form_action(@new_person)).to eq("/people/")
   end
   
   it 'gets the proper form action when editing a person' do
