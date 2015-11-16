@@ -4,7 +4,9 @@ body {
 	color: white;
 }
 
-
+.errors {
+ 	color: red;
+}
 
 .new-person {
  
