@@ -1,4 +1,4 @@
 # numerology-app
-Numerology app to provide birth path info based on birthdate
+Numerology app to displays birth path info based on birthdate
 
 Ruby, Sinatra, PostgreSQL
